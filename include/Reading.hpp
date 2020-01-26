@@ -148,7 +148,7 @@ public:
 	void  mark_delete()        { _deleted = true; }
 	void  reset()              { _deleted = false; }
 
-	void value(const double &v) { _value = v; }
+	void value(const double &v) { _value = (v > 0) ? v : 0; }
 	double value() const  { return _value; }
 
 	int64_t time_ms() const { return ((int64_t) _time.tv_sec)*1e3 + (_time.tv_usec / 1e3); };

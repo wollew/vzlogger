@@ -55,7 +55,7 @@ Reading::Reading(
 	, ReadingIdentifier::Ptr pIndentifier
 	)
 		: _deleted(false)
-		, _value(pValue)
+		, _value(pValue > 0 ? pValue : 0)
 		, _time(pTime)
 		, _identifier(pIndentifier)
 {
